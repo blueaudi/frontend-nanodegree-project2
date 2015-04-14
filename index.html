@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Resume - Glenn Hepler</title>
+		<link href="css/style.css" rel="stylesheet">
+		<link href="css/custom.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic' rel='stylesheet'>
+		<link href='http://fonts.googleapis.com/css?family=Hind' rel='stylesheet'>
+		<script src="js/jQuery.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+		<script src="js/helper.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
+		<script>
+			$(document).ready(function() {
+				$("#workExperience>div").hide();
+				$("#education>div").hide();
+				$("#education>h3").hide();
+				$("#projects>div").hide();
+				$("#workExperience>h2").click(function() {
+					var x = document.getElementById('WE-expcol');
+					var y = document.getElementById('workExperience');
+					if (x.innerHTML === "( + )") {
+						x.innerHTML = "( – )";
+						this.style.cursor = "zoom-out";
+						y.style.marginBottom = "20px";
+					} else {
+						x.innerHTML = "( + )";
+						this.style.cursor = "zoom-in";
+						y.style.marginBottom = "0";
+					}
+					$("#workExperience>div").slideToggle("slow");
+				});
+				$("#education>h2").click(function() {
+					var x = document.getElementById('ED-expcol');
+					var y = document.getElementById('education');
+					if (x.innerHTML === "( + )") {
+						x.innerHTML = "( – )";
+						this.style.cursor = "zoom-out";
+						y.style.marginBottom = "20px";
+					} else {
+						x.innerHTML = "( + )";
+						this.style.cursor = "zoom-in";
+						y.style.marginBottom = "0";
+					}
+					$("#education>div").slideToggle("slow");
+					$("#education>h3").toggle();
+				});
+				$("#projects>h2").click(function() {
+					var x = document.getElementById('PR-expcol');
+					var y = document.getElementById('projects');
+					if (x.innerHTML === "( + )") {
+						x.innerHTML = "( – )";
+						this.style.cursor = "zoom-out";
+						y.style.marginBottom = "20px";
+					} else {
+						x.innerHTML = "( + )";
+						this.style.cursor = "zoom-in";
+						y.style.marginBottom = "0";
+					}
+					$("#projects>div").slideToggle("slow");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="header" class="center-content clearfix">
+				<ul id="topContacts" class='flex-box'></ul>
+			</div>
+			<div id="workExperience">
+				<h2 class="gold-back-button black-text" title="Click to expand or collapse section">Work Experience<span id="WE-expcol" class="toggle-expand">( + )</span></h2>
+			</div>
+			<div id="education">
+				<h2 class="black-back-button gold-text" title="Click to expand or collapse section">Education<span id="ED-expcol" class="toggle-expand">( + )</span></h2>
+			</div>
+			<div id="projects">
+				<h2 class="gold-back-button black-text" title="Click to expand or collapse section">Projects<span id="PR-expcol" class="toggle-expand">( + )</span></h2>
+			</div>
+			<div id="mapDiv">
+				<h2 class="black-back-button gold-text">Where Iʼve Lived and Worked</h2>
+			</div>
+			<div id="letsConnect" class='black'>
+				<h2 class='gold-back center-text black-text pad-tb-5'>Letʼs Connect</h2>
+				<ul id="footerContacts" class="flex-box pad-tb-15"></ul>
+			</div>
+		</div>
+
+		<script src="js/resumeBuilder.js"></script>
+		<script type="text/javascript">
+			if(document.getElementsByClassName('flex-item').length === 0) {
+				document.getElementById('topContacts').style.display = 'none';
+			}
+			if(document.getElementsByTagName('h1').length === 0) {
+				document.getElementById('header').style.display = 'none';
+			}
+			if(document.getElementsByClassName('work-entry').length === 0) {
+				document.getElementById('workExperience').style.display = 'none';
+			}
+			if(document.getElementsByClassName('project-entry').length === 0) {
+				document.getElementById('projects').style.display = 'none';
+			}
+			if(document.getElementsByClassName('education-entry').length === 0) {
+				document.getElementById('education').style.display = 'none';
+			}
+			if(document.getElementsByClassName('flex-item').length === 0) {
+				document.getElementById('letsConnect').style.display = 'none';
+			}
+			if(document.getElementById('map') === null) {
+				document.getElementById('mapDiv').style.display = 'none';
+			}
+		</script>
+	</body>
+</html>

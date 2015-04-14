@@ -1,0 +1,80 @@
+.curved-edges-10 {
+	border-radius: 10px;
+}
+
+.left-curved-edges-5 {
+	border-radius: 5px 0 0 5px;
+}
+
+.right-curved-edges-5 {
+	border-radius: 0 5px 5px 0;
+	border-top: 1px dotted #c00;
+	border-right: 1px dotted #c00;
+	border-bottom: 1px dotted #c00;
+	padding: 1px 5px;
+}
+
+.gold-edges {
+	border-top: 1px solid #f5ae23;
+	border-right: 1px solid #f5ae23;
+	border-bottom: 1px solid #f5ae23;
+}
+
+.black-back-button {
+	padding: 5px 5%;
+	background: #000;
+}
+
+.burgundy-back {
+	padding: 2px 8px;
+	background-color: #c00;
+}
+
+.gold-back {
+	background: #f5ae23;
+}
+
+.gold-back-button {
+	padding: 5px 5%;
+	background: #f5ae23;
+}
+
+.white-back {
+	padding: 2px 8px;
+	background-color: #fff;
+}
+
+.black-text {
+	color: #000;
+}
+
+.burgundy-text, .burgundy-text-bold {
+	color: #c00;
+}
+
+.burgundy-text-bold {
+	font-weight: bold;
+}
+
+.gold-text {
+	color: #f5ae23;
+}
+
+.white-text {
+	color: #fff;
+}
+
+#infoWindow {
+	color: #000;
+	padding: 0;
+	width: 350px;
+}
+
+img.marker {
+	padding-top: 15px;
+}
+
+#biopic-container {
+	width: 500px;
+	margin: auto;
+}
